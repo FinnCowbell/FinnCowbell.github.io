@@ -1,0 +1,8 @@
+#vapor{
+  font-family: "Comic Sans MS";
+  background-image: linear-gradient(to right, #ff99e7, #ffcef3);
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 16px;
+}
