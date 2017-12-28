@@ -1,5 +1,7 @@
 #vapor{
-  font-family: "Comic Sans MS";
+  font-family: "Comic Sans MS Bold";
+  font-style: italic;
+  text-decoration: underline;
   background-image: linear-gradient(to right, #ff99e7, #ffcef3);
   color: transparent;
   -webkit-background-clip: text;
