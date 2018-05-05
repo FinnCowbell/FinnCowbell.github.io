@@ -9,37 +9,33 @@ function openSidebar(link){
   var pos = 0;
   var run = setInterval(anim, 1);
 
-  function setwidth(){ sidebar.style.width = 100 - parseInt(sidebar.style.left) + "%" }
+  function setwidth(){ sidebar.style.swidth = 100 - parseInt(sidebar.style.left) + "%" }
 
   function anim() {
-    if(pos >= Math.PI){
+    if(pos >= Math.PI){ // Alternatively, if(sidebar.style.left == 15%)
       clearInterval(run);
       frame.style.src=link;
-      sidebar.style.left = ((parseInt(sidebar.style.left) / window.innerWidth)*100) +"%"
       setwidth();
     } else{
-    sidebar.style.left = (
-      window.innerWidth - (window.innerWidth / 1.5)*Math.sin(pos - (Math.PI / 2))
-    );
+    sidebar.style.left = ((15) +  85 * (Math.cos(pos) + 1)/2 + "%"); // Plug it into Desmos to see how it works.
     pos += Math.PI / 200;
     }
   }
 }
 function closeSidebar(){;
   overlay.style.display = "none";
-  var pos = Math.PI / 2;
+  var pos = 0;
   var run = setInterval(anim, 1);
   function anim(){
-    if(pos <= 0){
+    frame.style.src="";
+    if(pos >= Math.PI){
       console.log("cleared");
       clearInterval(run);
       sidebar.style.left = "100%";
       frame.style.src="";
     } else{
-    sidebar.style.left =
-    (window.innerWidth - (window.innerWidth / 1.5)*Math.sin(pos));
-
-    pos -= Math.PI / 250;
+    sidebar.style.left = ((15) +  85 * (-Math.cos(pos) + 1)/2 + "%"); //The same function, but using -cos instead
+      pos += Math.PI / 200;
     }
   }
 }
