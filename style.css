@@ -32,7 +32,13 @@
   height: 95%;
   z-index: 3;
 }
-
+#closeSidebar{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 3%;
+  cursor: pointer;
+}
 #frame{
   border:none;
   align: middle;

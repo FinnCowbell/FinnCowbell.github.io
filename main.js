@@ -3,11 +3,12 @@ var frame = document.getElementById("frame");
 var snakeB = document.getElementById("snakeB");
 var scalingSnakeB = document.getElementById("scalingSnakeB");
 var overlay = document.getElementById("overlay");
+var exit = document.getElementById("closeSidebar");
 function openSidebar(link){
   overlay.style.display = "block";
   frame.src=link;
   var pos = 0;
-  var run = setInterval(anim, 1);
+  var run = setInterval(anim, 10);
 
   function setwidth(){ sidebar.style.swidth = 100 - parseInt(sidebar.style.left) + "%" }
 
@@ -42,3 +43,4 @@ function closeSidebar(){;
 snakeB.onclick = function(){openSidebar("https://finncowbell.github.io/snake/")};
 scalingSnakeB.onclick = function(){openSidebar("https://finncowbell.github.io/scalingSnake")}
 overlay.onclick = function(){closeSidebar();}
+exit.onclick = function(){closeSidebar();}
