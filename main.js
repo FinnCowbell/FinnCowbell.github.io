@@ -32,6 +32,7 @@ function closeSidebar(){;
       clearInterval(run);
       sidebar.style.left = "100%";
       frame.style.src="";
+      exitB.style.display = "none";
     } else{
     sidebar.style.left = ((15) +  85 * (-Math.cos(pos) + 1)/2 + "%"); //The same function, but using -cos instead
       pos += Math.PI / 200;
