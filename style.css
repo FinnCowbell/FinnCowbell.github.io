@@ -1,12 +1,20 @@
 .vapor{
   text-decoration: underline solid #ff99e7;
-  font-family: "Comic Sans MS";
-  font-style: italic;
   color: transparent;
+  font-style: italic;
   background-image: linear-gradient(to right,#ff99e7, #333333);
   -webkit-background-clip: text;
   background-clip: text;
-  font-size: 16px;
+  font-size: inherit;
+}
+.title{
+  font-family: 'Oswald', sans-serif;
+  font-size: 3em;
+}
+p{
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  font-size: 1em;
 }
 #overlay{
   position:fixed;
@@ -18,7 +26,7 @@
   right: 0;
   bottom: 0;
   background-color: rgba(0,0,0,0.5);
-  z-index: 1;
+  z-index: 2;
   cursor: pointer;
 }
 #sidebar{
