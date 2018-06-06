@@ -16,7 +16,7 @@
   font-size: inherit;
 }
 #saucy{
-  text-decoration: none;
+  text-decoration: underline solid Brown;
   color: Brown;
   font-family: "Comic Sans MS", cursive, sans-serif;
   font-size: 20px;
@@ -63,6 +63,7 @@ p{
   animation-duration: 1.00s;
   animation-direction: normal;
   animation-iteration-count: infinite;
+  animation-timing-function: cubic-bezier();
 }
 @keyframes openSidebar {
   from{
