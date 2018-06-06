@@ -1,44 +1,40 @@
 var sidebar = document.getElementById("sidebar");
 var frame = document.getElementById("frame");
-var snakeB = document.getElementById("snakeB");
-var scalingSnakeB = document.getElementById("scalingSnakeB");
+var snakeB = document.getElementById("snake1");
+var scalingSnakeB = document.getElementById("snake2");
 var overlay = document.getElementById("overlay");
 var exitB = document.getElementById("exitButton");
+var opening = false;
 function openSidebar(link){
-  overlay.style.display = "block";
+  sidebar.style.display = 'block';
+  sidebar.style.animationPlayState = "running";
+  overlay.style.display = 'block';
+  sidebar.style.animationDirection = 'normal';
   frame.src=link;
-  var pos = 0;
-  var run = setInterval(anim, 2);
-  function anim() {
-    if(pos >= Math.PI){ // Alternatively, if(sidebar.style.left == 15%)
-      clearInterval(run);
-      frame.style.src=link;
-      exitB.style.display = "block";
-    } else{
-    sidebar.style.left = ((15) +  85 * (Math.cos(pos) + 1)/2 + "%"); // Plug it into Desmos to see how it works.
-    pos += Math.PI / 200;
-    }
-  }
+  opening = true;
 }
 function closeSidebar(){;
-  overlay.style.display = "none";
-  exitB.style.display = "none";
-  var pos = 0;
-  var run = setInterval(anim, 1);
-  function anim(){
-    frame.style.src="";
-    if(pos >= Math.PI){
-      console.log("cleared");
-      clearInterval(run);
-      sidebar.style.left = "100%";
-      frame.style.src="";
-      exitB.style.display = "none";
-    } else{
-    sidebar.style.left = ((15) +  85 * (-Math.cos(pos) + 1)/2 + "%"); //The same function, but using -cos instead
-      pos += Math.PI / 200;
-    }
-  }
+  sidebar.style.animationPlayState = "running";
+  sidebar.style.animationDirection = 'reverse';
+  exitB.style.display = 'none';
+  frame.style.src="";
+  opening = false;
 }
+sidebar.addEventListener("animationiteration", function(){
+  sidebar.style.animationPlayState = "paused";
+  if(opening){
+    sidebar.style.animationDirection = 'reverse';
+    sidebar.style.left = '20%';
+    exitB.style.display = 'block';
+  } else{
+    sidebar.style.display = 'none';
+    sidebar.style.animationDirection = 'normal';
+    sidebar.style.left = "100%";
+    frame.style.src="";
+    overlay.style.display = 'none';
+}
+},false);
+
 snakeB.onclick = function(){openSidebar("https://finncowbell.github.io/snake/")};
 scalingSnakeB.onclick = function(){openSidebar("https://finncowbell.github.io/scalingSnake")}
 overlay.onclick = function(){closeSidebar();}

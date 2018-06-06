@@ -1,13 +1,21 @@
-.vapor{
+
+#snake1{
   text-decoration: underline solid #ff99e7;
   color: transparent;
-  font-style: italic;
   background-image: linear-gradient(to right,#ff99e7, #333333);
   -webkit-background-clip: text;
   background-clip: text;
   font-size: inherit;
 }
-.saucy{
+#snake2{
+  text-decoration: underline solid #ff99e7;
+  color: transparent;
+  background-image: linear-gradient(to right, red, orange, green, cyan, blue, violet);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: inherit;
+}
+#saucy{
   text-decoration: none;
   color: Brown;
   font-family: "Comic Sans MS", cursive, sans-serif;
@@ -44,25 +52,37 @@ p{
   position:fixed;
   background-color: white;
   top: 0;
-  left: 100%;
+  left:100%;
   right: 0;
   border-left: 3px solid black;
   border-bottom: 3px solid black;
   height: 95%;
   z-index: 2;
+  animation-name: openSidebar;
+  animation-play-state: paused;
+  animation-duration: 1.00s;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+}
+@keyframes openSidebar {
+  from{
+    left:100%;
+  }
+  to{
+    left:20%;
+  }
 }
 #frame{
   border:none;
   align: middle;
   height: 100%;
   width: 100%;
-  z-index: 2;
 }
 #exitButton{
   position: fixed;
   display: none;
-  top: 10px;
-  right: 10px;
+  top: 2%;
+  right: 2%;
   width: 25px;
   cursor: pointer;
   z-index: 3;
