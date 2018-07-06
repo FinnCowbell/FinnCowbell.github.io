@@ -2,13 +2,15 @@ var sidebar = document.getElementById("sidebar");
 var frame = document.getElementById("frame");
 var snakeB = document.getElementById("snake1");
 var scalingSnakeB = document.getElementById("snake2");
+var saucyB = document.getElementById('saucy');
 var overlay = document.getElementById("overlay");
 var exitB = document.getElementById("exitButton");
 var opening = false;
-function openSidebar(link){
+function openSidebar(link, alpha){
   sidebar.style.display = 'block';
   sidebar.style.animationPlayState = "running";
   overlay.style.display = 'block';
+  overlay.style.opacity = alpha;
   sidebar.style.animationDirection = 'normal';
   frame.src=link;
   opening = true;
@@ -35,7 +37,8 @@ sidebar.addEventListener("animationiteration", function(){
 }
 },false);
 
-snakeB.onclick = function(){openSidebar("https://finncowbell.github.io/snake/")};
-scalingSnakeB.onclick = function(){openSidebar("https://finncowbell.github.io/scalingSnake")}
+snakeB.onclick = function(){openSidebar("https://finncowbell.github.io/snake/",.5)};
+scalingSnakeB.onclick = function(){openSidebar("https://finncowbell.github.io/scalingSnake",.5)}
+saucyB.onclick = function(){openSidebar("https://finncowbell.github.io/saucy",.95)}
 overlay.onclick = function(){closeSidebar();}
 exitB.onclick = function(){closeSidebar();}
