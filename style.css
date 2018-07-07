@@ -1,4 +1,6 @@
-
+html{
+  --open-location: 20%;
+}
 #snake1{
   text-decoration: underline solid #ff99e7;
   color: transparent;
@@ -48,11 +50,28 @@ p{
   z-index: 2;
   cursor: pointer;
 }
+#handle{
+  position:absolute;
+  left: inherit - 5;
+  height:100%;
+  width: 10px;
+  cursor: ew-resize;
+  z-index: 4;
+}
+#grab{
+  background-color: rgba(0,0,0,0.05);
+  background-image: url("images/Grippable.png");
+  position: sticky;
+  pointer-events: none;
+  top:40%;
+  height:10%;
+  background-repeat: no-repeat;
+}
 #sidebar{
-  position:fixed;
+  position:absolute;
   background-color: white;
   top: 0;
-  left:100%;
+  left:var(--open-location);
   right: 0;
   border-left: 3px solid black;
   border-bottom: 3px solid black;
@@ -60,27 +79,38 @@ p{
   z-index: 2;
   animation-name: openSidebar;
   animation-play-state: paused;
-  animation-duration: 1.00s;
+  animation-duration: 1.5s;
   animation-direction: normal;
+  animation-fill-mode: forwards;
   animation-iteration-count: infinite;
-  animation-timing-function: cubic-bezier();
+  animation-timing-function: ease;
 }
 @keyframes openSidebar {
   from{
     left:100%;
   }
   to{
-    left:20%;
+    left:var(--open-location);
   }
+}
+#frameBlocker{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index: 3;
+  display: none;
 }
 #frame{
   border:none;
   align: middle;
   height: 100%;
   width: 100%;
+  z-index: inherit;
 }
 #exitButton{
-  background-color: rgba(255,255,255,.1);
+  background-color: rgba(255,255,255,.05);
   position: fixed;
   display: none;
   top: 2%;

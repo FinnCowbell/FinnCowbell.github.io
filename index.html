@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html id="html">
 <head>
   <title>Finland</title>
-  <link rel="shortcut icon" type="image/x-icon" href="icon.jpg" />
+  <link rel="shortcut icon" type="image/x-icon" href="images/icon.jpg" />
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Oswald:300,400" rel="stylesheet">
 </head>
@@ -16,9 +16,12 @@
   <p id="saucyB"><a id="saucy" href="#" onclick="return false">Saucy.</a></p>
   <div id="overlay"></div>
   <div id="sidebar">
-    <iframe id="frame" src="https://finncowbell.github.io/scalingSnake">
-    </iframe>
-    <img id="exitButton" src="exit.png"/>
+    <div id="handle">
+      <div id="grab"></div>
+    </div>
+      <iframe id="frame" src="https://finncowbell.github.io/scalingSnake"></iframe>
+      <div id="frameBlocker"></div>
+      <img id="exitButton" src="images/exit.png"/>
   </div>
 </body>
 <script type="text/javascript" src="main.js"></script>
