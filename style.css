@@ -1,5 +1,5 @@
 html{
-  --open-location: 20%;
+  --sidebar-location: 20%;
 }
 #snake1{
   text-decoration: underline solid #ff99e7;
@@ -71,7 +71,7 @@ p{
   position:absolute;
   background-color: white;
   top: 0;
-  left:var(--open-location);
+  left:var(--sidebar-location);
   right: 0;
   border-left: 3px solid black;
   border-bottom: 3px solid black;
@@ -90,7 +90,7 @@ p{
     left:100%;
   }
   to{
-    left:var(--open-location);
+    left:var(--sidebar-location);
   }
 }
 #frameBlocker{

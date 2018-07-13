@@ -48,7 +48,7 @@ handle.onmousedown = function(event){
     sidebar.style.left = newPercent;
   }
   document.onmouseup = function(event){
-    css.setProperty('--open-location',(newPercent))
+    css.setProperty('--sidebar-location',(newPercent))
     frameBlocker.style.display = 'none';
     frame.focus();
     document.onmouseup = null;
