@@ -4,6 +4,7 @@ var frameBlocker = document.getElementById('frameBlocker');
 var snakeB = document.getElementById("snake1");
 var scalingSnakeB = document.getElementById("snake2");
 var saucyB = document.getElementById('saucy');
+var sovB = document.getElementById('sov')
 var overlay = document.getElementById("overlay");
 var exitB = document.getElementById("exitButton");
 var handle = document.getElementById('handle')
@@ -65,6 +66,9 @@ scalingSnakeB.onclick = function() {
 }
 saucyB.onclick = function() {
   openSidebar("https://finncowbell.github.io/saucy", .95)
+}
+sovB.onclick = function(){
+  openSidebar("https://finncowbell.github.io/spirographsOfVenus",.5)
 }
 overlay.onclick = function() {
   closeSidebar();
