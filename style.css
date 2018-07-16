@@ -21,6 +21,7 @@ html {
 }
 
 #saucy {
+  display: none;
   text-decoration: underline solid Brown;
   color: Brown;
   font-family: "Comic Sans MS", cursive, sans-serif;

@@ -10,8 +10,14 @@ var exitB = document.getElementById("exitButton");
 var handle = document.getElementById('handle')
 var opening = false;
 var css = document.getElementById('html').style;
-
-function openSidebar(link, alpha) {
+let secretSound = document.getElementById('secretSound')
+secretSound.volume = .25
+let secret = new Konami();
+secret.activateFunction = function(){
+  secretSound.play();
+  openSidebar("https://finncowbell.github.io/saucy", .95)}
+secret.run()
+let openSidebar = function (link, alpha) {
   sidebar.style.animationName = "openSidebar";
   sidebar.style.display = 'block';
   sidebar.style.animationPlayState = "running";
