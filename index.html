@@ -4,19 +4,27 @@
 <head>
   <title>Finland</title>
   <link href="https://fonts.googleapis.com/css?family=Oswald:300,400" rel="stylesheet">
-  <link rel="shortcut icon" type="image/x-icon" href="images/icon.jpg" />
+  <link rel="shortcut icon" type="image/x-icon" href="media/icon.jpg" />
   <link rel="stylesheet" href="style.css">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-122479381-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-122479381-1');
+  </script>
 </head>
 <audio id="secretSound">
-    <source src="bloop.wav" type="audio/wav">
+    <source src="media/bloop.wav" type="audio/wav">
 </audio>
 
 <body>
   <h1 class="title">FinnNav.in</h1>
   <p>Hi, I'm Finn.</p>
-  <p>Here you can check out my <a href="#" id="snake1" onclick="return false;">First Snake Game</a>
-    <p>Later, I made it fit the window. Introducing <a href="#" class="sbLink" id="snake2" onclick="return false;">Resizable Snake</a></p>
-    <p>In July 2018, I participated in the Museum of Math's Hackathon. <a href="#" onclick="return false" class="sbLink" id="sov">Spectrographs of Venus</a> won first place in it's category.
+  <p>Here you can check out my <a href="#" class="sidebarLink" id="snake1" onclick="return false;">First Snake Game</a>
+    <p>Later, I made it fit the window. Introducing <a href="#" class="sidebarLink" id="snake2" onclick="return false;">Resizable Snake</a></p>
+    <p>In July 2018, I participated in the Museum of Math's Hackathon. <a href="#" class="sidebarLink" id="sov" onclick="return false">Spirographs of Venus</a> won first place in it's category.
       <p id="saucyB"><a id="saucy" href="#" onclick="return false">Saucy.</a></p>
       <div id="overlay"></div>
       <div id="sidebar">
@@ -25,9 +33,9 @@
         </div>
         <iframe id="frame" src="https://helenkellersimulator.org/"></iframe>
         <div id="frameBlocker"></div>
-        <img id="exitButton" src="images/exit.png" />
+        <img id="exitButton" src="media/exit.png" />
       </div>
 </body>
-<script type="text/javascript" src="konami.js"></script>
-<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="js/konami.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </html>
