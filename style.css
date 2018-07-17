@@ -21,6 +21,14 @@ html {
   background-clip: text;
   font-size: inherit;
 }
+#sov{
+  text-decoration: underline solid darkBlue;
+  color: transparent;
+  background-image: linear-gradient(to right, darkBlue, darkBlue, darkBlue, #cccc00);
+  background-clip: text;
+  -webkit-background-clip: text;
+  font-size: inherit;
+}
 
 #saucy {
   display: none;
