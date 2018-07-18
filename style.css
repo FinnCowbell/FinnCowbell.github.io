@@ -24,7 +24,7 @@ html {
 #sov{
   text-decoration: underline solid darkBlue;
   color: transparent;
-  background-image: linear-gradient(to right, darkBlue, darkBlue, darkBlue, #cccc00);
+  background-image: radial-gradient(circle at center,#aaaa00 15%, darkBlue 50%,#AAAAAA 60%,darkBlue 100%);
   background-clip: text;
   -webkit-background-clip: text;
   font-size: inherit;
