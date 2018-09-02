@@ -6,16 +6,17 @@ html {
 }
 #snake1 {
   text-decoration: underline solid #ff99e7;
-  color: transparent;
+  color: rgba(125,125,125,0.25); /* Requrires some alpha value to display underline on Safari */
   background-image: linear-gradient(to right, #ff99e7, #333333);
   -webkit-background-clip: text;
   background-clip: text;
   font-size: inherit;
+
 }
 
 #snake2 {
   text-decoration: underline solid #ff99e7;
-  color: transparent;
+  color: rgba(125,125,125,0.25);
   background-image: linear-gradient(to right, red, orange, green, cyan, blue, violet);
   -webkit-background-clip: text;
   background-clip: text;
@@ -23,8 +24,8 @@ html {
 }
 #sov{
   text-decoration: underline solid darkBlue;
-  color: transparent;
-  background-image: radial-gradient(circle at center,#aaaa00 15%, darkBlue 50%,#AAAAAA 60%,darkBlue 100%);
+  color: rgba(125,125,125,0.25);
+  background-image: radial-gradient(circle at center,#bbbb00 15%, darkBlue 50%,#BBBBBB 60%,darkBlue 100%);
   background-clip: text;
   -webkit-background-clip: text;
   font-size: inherit;
@@ -80,9 +81,10 @@ p {
 #grab {
   background-color: rgba(0, 0, 0, 0.05);
   background-image: url("media/Grippable.png");
-  position: sticky;
+  position: relative;
   pointer-events: none;
-  top: 40%;
+  top: 45%;
+  bottom:55%;
   height: 10%;
   background-repeat: no-repeat;
 }
@@ -92,13 +94,13 @@ p {
   position: absolute;
   background-color: white;
   top: 0;
-  left: var(--sidebar-location);
+  left: 100%;
   right: 0;
   border-left: 3px solid black;
   border-bottom: 3px solid black;
   height: 95%;
   z-index: 2;
-  animation-name: openSidebar;
+  animation-name: unset;
   animation-play-state: paused;
   animation-duration: .9s;
   animation-direction: normal;

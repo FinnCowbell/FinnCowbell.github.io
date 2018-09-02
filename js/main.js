@@ -39,6 +39,9 @@ sidebar.addEventListener("animationiteration", function() {
   //when the animation completes
   sidebar.style.animationPlayState = "paused";
   if (opening) {
+    sidebar.style.left = 'var(--sidebar-location)'; /*
+    Initial value is not the sidebar location, as it breaks it on safari.
+    I set the sidebar to the variable after it animates once, and that fixes it.*/
     frame.focus();
     sidebar.style.animationName = "unset";
     exitB.style.display = 'block';
