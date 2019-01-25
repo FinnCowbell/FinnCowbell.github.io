@@ -1,7 +1,7 @@
 //There's no vanilla-js search array-in-array function! Strings it is.
-let Konami = function(){
+let Konami = function(code){
    this.sound =
-   this.code = "38384040373937396665";
+   this.code = code;
    this.recorded = "";
    this.activateFunction = function(){console.log("activated")};
    this.run =function(){

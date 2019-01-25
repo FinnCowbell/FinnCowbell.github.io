@@ -12,11 +12,18 @@ var opening = false;
 var css = document.getElementById('html').style;
 let secretSound = document.getElementById('secretSound')
 secretSound.volume = .25
-let secret = new Konami();
-secret.activateFunction = function(){
+let secretCabbage = document.getElementById('secretCabbage')
+secretCabbage.volume = .5
+let Sauce = new Konami("38384040373937396665");
+Sauce.activateFunction = function(){
   secretSound.play();
   openSidebar("https://finncowbell.github.io/saucy", .95)}
-secret.run()
+Sauce.run()
+
+let Cab = new Konami("67656666657169");
+Cab.activateFunction = function(){
+  secretCabbage.play();
+  openSidebar("https://finncowbell.github.io/Cannonball-Cabbage", .95)}
 let openSidebar = function (link, alpha) {
   sidebar.style.animationName = "openSidebar";
   sidebar.style.display = 'block';
@@ -27,6 +34,7 @@ let openSidebar = function (link, alpha) {
   frame.src = link;
   opening = true;
 }
+Cab.run()
 
 function closeSidebar() {;
   sidebar.style.animationName = "openSidebar";
