@@ -1,18 +1,18 @@
 var sidebar = document.getElementById("sidebar");
 var frame = document.getElementById("frame");
 var frameBlocker = document.getElementById('frameBlocker');
+var cabbageB = document.getElementById('cabbageB');
 var snakeB = document.getElementById("snake1");
 var scalingSnakeB = document.getElementById("snake2");
 var saucyB = document.getElementById('saucy');
-var sovB = document.getElementById('sov')
+var sovB = document.getElementById('sov');
 var overlay = document.getElementById("overlay");
 var exitB = document.getElementById("exitButton");
-var handle = document.getElementById('handle')
+var handle = document.getElementById('handle');
 var opening = false;
 var css = document.getElementById('html').style;
 let secretSound = document.getElementById('secretSound')
 secretSound.volume = .25
-let secretCabbage = document.getElementById('secretCabbage')
 secretCabbage.volume = .5
 let Sauce = new Konami("38384040373937396665");
 Sauce.activateFunction = function(){
@@ -20,10 +20,10 @@ Sauce.activateFunction = function(){
   openSidebar("https://finncowbell.github.io/saucy", .95)}
 Sauce.run()
 
-let Cab = new Konami("67656666657169");
-Cab.activateFunction = function(){
-  secretCabbage.play();
-  openSidebar("https://finncowbell.github.io/Cannonball-Cabbage", .95)}
+// let Cab = new Konami("67656666657169");
+// Cab.activateFunction = function(){
+//   secretCabbage.play();
+//   openSidebar("https://finncowbell.github.io/Cannonball-Cabbage", .95)}
 let openSidebar = function (link, alpha) {
   sidebar.style.animationName = "openSidebar";
   sidebar.style.display = 'block';
@@ -34,7 +34,7 @@ let openSidebar = function (link, alpha) {
   frame.src = link;
   opening = true;
 }
-Cab.run()
+// Cab.run()
 
 function closeSidebar() {;
   sidebar.style.animationName = "openSidebar";
@@ -92,4 +92,9 @@ overlay.onclick = function() {
 }
 exitB.onclick = function() {
   closeSidebar();
+}
+cabbageB.onclick = function(){
+  console.log("Acrivagted")
+  secretCabbage.play();
+  openSidebar("https://finncowbell.github.io/Cannonball-Cabbage", .95)
 }

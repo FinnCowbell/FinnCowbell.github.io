@@ -4,6 +4,10 @@ html {
 
 .sidebarLink{
 }
+#cabbageB {
+  color: black;
+  text-decoration: none;
+}
 #snake1 {
   text-decoration: underline solid #ff99e7;
   color: rgba(125,125,125,0.25); /* Requrires some alpha value to display underline on Safari */
