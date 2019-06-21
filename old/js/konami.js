@@ -1,13 +1,15 @@
-let Konami = function(code = "38384040373937396665" ){
+//There's no vanilla-js search array-in-array function! Strings it is.
+let Konami = function(code){
    this.sound =
    this.code = code;
    this.recorded = "";
    this.activateFunction = function(){console.log("activated")};
-   this.run = function(){
+   this.run =function(){
     let konami = this
     document.addEventListener('keydown', function(k){
-      konami.recorded += k.which //k.which is the keycode
+      konami.recorded += k.which
       if (konami.code == konami.recorded) {
+        console.log("Konami activated!")
         konami.activateFunction();
         konami.recorded = "";
       }

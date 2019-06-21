@@ -1,0 +1,154 @@
+body{
+  overflow:hidden;
+}
+/*Logo Animation*/
+.heading{
+ font-family: Oxygen, sans-serif;
+ color:#333333;
+ margin-top: -60px;
+ animation-name: panDown;
+ animation-duration: 2s;
+ animation-delay: 1.5s;
+ animation-fill-mode: forwards;
+}
+@keyframes panDown{
+  0%{
+    margin-top: -60px;
+  }
+  100%{
+    margin-top: -20px;
+  }
+}
+#logo{
+  font-size: 100px;
+  text-align:center;
+  width:100%;
+  margin-left: auto;
+  margin-right: auto;
+  position:absolute;
+}
+#logo *{
+  display:inline;
+}
+#heading{
+
+}
+#finn{
+  left: 0;
+  animation-play-state: paused;
+  animation-name: DotAnim;
+  animation-delay: .25s;
+  animation-duration: .5s;
+  animation-iteration-count: 2;
+  animation-direction: alternate;
+}
+#dot {
+  display: inline;
+  size: 0em;
+  animation: DotAnim;
+  animation-delay: .25s;
+  animation-duration: .5s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+@keyframes DotAnim{
+  0%{
+    position:relative;
+    bottom:0;
+    opacity: 1;
+
+  }
+  1%{
+    position:relative;
+    bottom:0;
+  }
+  100%{
+    bottom: -20px;
+    opacity:0;
+    position:relative;
+  }
+}
+
+#space{
+  height:100px;
+  opacity: 0;
+  animation-name: ShrinkSpace;
+  animation-delay: 1s;
+  animation-duration: .4s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: both;
+  animation-direction: reverse;
+}
+
+#dot-shrink{
+  font-size:1em;
+  animation-name: ShrinkSpace;
+  animation-duration: .4s;
+  animation-delay: 1s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+@keyframes ShrinkSpace{
+  from {
+    font-size: 1em;
+  }
+  to {
+    font-size: 0em;
+  }
+}
+/*END LOGO*/
+
+/*Footer*/
+.footer{
+position:absolute;
+bottom: 50px;
+width: 100%;
+padding:none;
+margin: auto;
+height: 50px;
+display: flex;
+justify-content: center;
+}
+.footer-icon{
+  border: outset darkGray 2px;
+  width: 60px;
+  height: 60px;
+  border-radius:100%;
+}
+.icon-link{
+  margin-left:3%;
+  margin-right:3%;
+  width: 60px;
+  height: 60px;
+  border-radius:100%;
+  animation-name: fadeUp;
+  animation-duration: 1s;
+  animation-fill-mode: backwards;
+}
+#one{
+  animation-delay: .25s;
+}
+#two{
+  animation-delay: .5s;
+}
+#three{
+  animation-delay: .75s;
+}
+@keyframes fadeUp {
+  0%{
+    opacity:0;
+    position: relative;
+    top:75px;
+  }
+  99%{
+    position:relative;
+    top:0px
+    opacity:1;
+  }
+  100%{
+    position: relative;
+    opacity:1;
+    top:0px;
+  }
+}
+/*End Footer*/
